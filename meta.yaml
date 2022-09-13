@@ -1,0 +1,14 @@
+package:
+  name: myfuncondaproject
+  version: "0.0.1"
+
+source:
+  path: ./myfuncondaproject
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
