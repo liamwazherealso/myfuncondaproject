@@ -8,7 +8,8 @@ RUN ./install-packages.sh
 
 COPY environment.yml .
 
-RUN conda env create -n myfuncondaproject --file environment.yml
+RUN conda install -c conda-forge conda-lock
+RUN conda-lock install -n myfuncondaproject environment.yml
 
 COPY bld.bat .
 COPY build.sh .
