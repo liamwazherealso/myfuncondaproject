@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+   myfuncondaproject-build:
+        # this is for allowing to run in detached mode
+        tty: true
+        stdin_open: true
+        build:
+            context: ./
+            dockerfile: docker/myfuncondaproject-build.Dockerfile
+        image: lpieri/myfuncondaproject-build
+        container_name: myfuncondaproject-build
+        volumes:
+            - ~/anaconda3/conda-bld:/opt/conda/envs/myfuncondaproject/conda-bld/
