@@ -1,6 +1,15 @@
 version: '3'
 
 services:
+   myfuncondaproject:
+        # this is for allowing to run in detached mode
+        tty: true
+        stdin_open: true
+        build:
+            context: ./
+            dockerfile: docker/myfuncondaproject.Dockerfile
+        image: foldedai/myfuncondaproject
+        container_name: myfuncondaproject
    myfuncondaproject-build:
         # this is for allowing to run in detached mode
         tty: true
